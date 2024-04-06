@@ -1,0 +1,16 @@
+matricula	marca	model	tipus	color	distintiu ambiental	DNI
+1	bmw	m1	electric	vermell	0	1
+2	bmw	m2	hibrid	blanc	0	1
+3	toyota	m3	gasolina	negre	b	2
+4	renault	m1	gasoil	blanc	c	3
+5	mercedes	m2	electric	blanc	0	4
+6	toyota	m5	electric	gris	0	5
+7	toyota	m4	hibrid	blau	0	6
+8	mercedes	m7	hibrid	negre	0	7
+9	mercedes	m1	gasolina	blau	b	8
+10	renault	m3	gasolina	blanc	c	8
+11	renault	m8	gasolina	vermell	b	10
+12	seat	m2	gasolina	vermell	c	11
+13	seat	m5	gasolina	negre	b	12
+14	renault	m4	gasoil	blanc	b	12
+15	mercedes	m3	electric	gris	0	13

@@ -1,0 +1,16 @@
+id_placa	planta	zona	numero	carregador
+1	1	1	11	si
+2	1	1	12	no
+3	1	2	13	si
+4	1	2	14	si
+5	2	1	21	no
+6	2	1	22	no
+7	2	1	23	no
+8	2	2	24	no
+9	2	2	25	no
+10	2	3	26	no
+11	3	1	31	no
+12	3	1	32	si
+13	3	2	33	si
+14	3	2	34	no
+15	3	3	35	no

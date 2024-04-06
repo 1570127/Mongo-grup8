@@ -1,0 +1,15 @@
+DNI	nom	cognom	edat	genere	codi_postal	poblacio	adreca	correu
+1	p1	c1	20	h	1	p1	a1	c1
+2	p2	c2	20	h	1	p1	a2	c2
+3	p3	c3	21	h	1	p1	a3	c3
+4	p4	c4	32	d	1	p1	a4	c4
+5	p5	c4	41	d	2	p2	a4	c5
+6	p6	c4	34	d	2	p2	a4	c6
+7	p7	c5	23	h	2	p2	a5	c7
+8	p8	c6	18	d	2	p2	a6	c8
+9	p9	c7	65	h	3	p3	a7	c9
+10	p10	c8	52	h	3	p3	a8	c10
+11	p1	c9	47	d	4	p4	a9	c11
+12	p2	c10	59	d	4	p4	a10	c12
+13	p11	c11	27	d	1	p1	a11	c13
+14	p12	c12	31	h	5	p5	a12	c14
