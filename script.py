@@ -165,8 +165,8 @@ for i in clients:
             i["targetes"].append(j["numero"])
 
 # Passar-ho a Mongodb
-Host = 'localhost'
-Port = 27017
+Host = 'dcccluster.uab.cat'
+Port = 8199
 
 DSN = "mongodb://{}:{}".format(Host,Port)
 
