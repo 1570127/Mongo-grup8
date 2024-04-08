@@ -16,3 +16,30 @@ db.clients.aggregate([
 db.productes.aggregate([
   {$group: {_id: null,preuMaxim: { $max: "$preu" },preuMinim: { $min: "$preu" },preuMitja: { $avg: "$preu" }}}
 ])
+
+//Consulta 4
+db.clients.aggregate([
+  {$lookup: {from: "cotxes",localField: "DNI",foreignField: "DNI",as: "cotxes"}},
+  {$match: { $or: [ { "cotxes": { $size: 0 } }, { $and: [{ "cotxes": { $size: 1 } }, { "cotxes.estades": { $size: 0 } } ]}]}},
+  {$limit: 5}
+])
+
+//Consulta 5
+db.estades.aggregate([
+  {$match: {
+      $and: [
+        { "data_hora_entrada": { $lte: ISODate("2020-01-11T23:59:59.999Z") } },
+        { "data_hora_sortida": { $gte: ISODate("2020-01-11T00:00:00.000Z") } } ]}},
+  {$lookup: {from: "cotxes",localField: "matricula",foreignField: "matricula",as: "vehicle"}},
+  {$lookup: {from: "clients",localField: "vehicle.DNI",foreignField: "DNI",as: "clients"}},
+  {$project: {"places": "$id_placa","vehicle": {"matricula": "$matricula","marca": "$vehicle.marca","model": "$vehicle.model","estades": "$estades"},
+      "clients": {"nom": "$clients.nom","cognom": "$clients.cognom"},"_id": 0}}
+])
+
+//Consulta 6
+db.packs.find({ "quantitat": { $gte: 4 } })
+
+//Consulta 7
+db.productes.aggregate([
+  {$group: {_id: "$categories",productes: { $push: "$$ROOT" }}}
+])
