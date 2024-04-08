@@ -1,0 +1,18 @@
+// Consulta 1
+db.tiquets.aggregate([
+  {$match: {data: { $gte: new Date("2019-12-31"),$lt: new Date("2021-01-01")},preu_total: { $gt: 500 }}},
+  {$group: {_id: "$DNI"}},
+  {$count: "nombre_clients"}
+])
+
+// Consulta 2
+db.clients.aggregate([
+  {$match: {poblacio: "Barcelona"}},
+  {$sort: {edat: -1}},
+  {$limit: 1}
+])
+
+//Consulta 3
+db.productes.aggregate([
+  {$group: {_id: null,preuMaxim: { $max: "$preu" },preuMinim: { $min: "$preu" },preuMitja: { $avg: "$preu" }}}
+])
