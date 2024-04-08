@@ -8,7 +8,11 @@ Client <collection>{
     "poblacio": <string>
     "codi postal": <int>
     "adreça": <string>
-    "targeta":[(<string>,<int>),(<string>,<int>)]
+}
+
+Targeta <collection>{
+    "numero": <int>
+    "tipus": <string>
 }
 
 Cotxe <collection>{
