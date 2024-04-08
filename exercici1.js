@@ -13,6 +13,7 @@ Client <collection>{
 Targeta <collection>{
     "numero": <int>
     "tipus": <string>
+    "dni_client": <string>
 }
 
 Cotxe <collection>{
