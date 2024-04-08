@@ -58,7 +58,7 @@ Producte <collection>{
     "nom": <string>
     "fabricant": <string>
     "pes": <float>
-    "categoria": [<string>,<string>]
+    "categoria": <string>
     "preu": <float>
-    "pack": [(<int>,<string>)] 
+    "pack": [<int>] 
 }
