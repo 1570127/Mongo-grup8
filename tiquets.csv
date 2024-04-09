@@ -1,8 +1,8 @@
 id_tiquet	preu_total	tipus_pagament	data	DNI
 1	34	tarjeta	01/01/2020	1
 2	25	efectiu	20/02/2020	1
-3	43	tarjeta	30/04/2020	1
-4	26	tarjeta	28/07/2020	2
+3	673	tarjeta	30/04/2020	1
+4	511	tarjeta	28/07/2020	2
 5	16	tarjeta	03/10/2020	2
 6	10	efectiu	17/12/2020	3
 7	28	efectiu	06/01/2021	3
