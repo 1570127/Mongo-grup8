@@ -43,3 +43,24 @@ db.packs.find({ "quantitat": { $gte: 4 } })
 db.productes.aggregate([
   {$group: {_id: "$categories",productes: { $push: "$$ROOT" }}}
 ])
+
+//Consulta 8
+db.tiquets.aggregate([{$group:{_id:"$tipus_pagament",total: {$sum: 1}}}])
+
+//Consulta 9
+db.tiquet_productes.aggregate([{$match: {"id_producte": 1}},
+{ $lookup: {
+       from: "tiquets",
+       localField: "id_tiquet",
+       foreignField: "id_tiquet",
+       as: "info_tiquet"
+     }},
+{$unwind: "$info_tiquet"}, 
+{ $lookup: {
+       from: "clients",
+       localField: "info_tiquet.DNI",
+       foreignField: "DNI",
+       as: "id_client"
+     }},
+{$unwind: "$id_client"}, 
+{ $project:{ _id: 0, nom: "$id_client.nom", cognom: "$id_client.cognom"}}])
